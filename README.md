@@ -1,1 +1,3 @@
-# dotsmash
+# DotSmash
+
+Sectie Bitjes Battle Royale
