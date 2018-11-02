@@ -25,9 +25,9 @@ app.get('/', function(req, res) {
 
     // If the browser is not a mobile one, don't allow to play the game
     if (!md.mobile()) {
-        res.sendFile(`${__dirname}/client/not-mobile.html`);
+        res.sendFile(`${__dirname}/not-mobile.html`);
     } else {
-        res.sendFile(`${__dirname}/client/dotsmash.html`);
+        res.sendFile(`${__dirname}/dotsmash.html`);
     }
 });
 
