@@ -30,6 +30,7 @@ app.get('/', function(req, res) {   // TODO: Enable mobile detect again
     // }
 });
 app.get('/dotsmash.js', function (req, res) { res.sendFile(`${__dirname}/client/dotsmash.js`); });
+app.get('/p2.js', function (req, res) { res.sendFile(`${__dirname}/client/p2.js`); });
 
 // Socket code for each connected client
 // io.on('connection', function(socket){

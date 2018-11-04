@@ -18,14 +18,8 @@
         var thisobj = this;
         this.connected.push(socket);
         console.log(`user connected: ${socket.id}`);
-        socket.on('message-to-server', function (msg) {
-            console.log(`${socket.id} says to me: ${msg}`);
-        });
-        socket.on('message-to-everyone', function (msg) {
-            console.log(`${socket.id} says to everyone: ${msg}`);
-            for (var i in thisobj.connected) {
-                thisobj.connected[i].emit('message-from-server', `${socket.id} says to everyone: ${msg}`);
-            }
+        socket.on('position-update', function (data) {
+            console.log(data);
         });
         socket.on('disconnect', function () { thisobj.Disconnecting(socket); });
     }
