@@ -62,3 +62,6 @@ typings/
 /DotSmashBr.sln
 /DotSmashBr.njsproj
 /.vs/DotSmashBr/v15/.suo
+/bin
+/obj/Debug
+/sessions
