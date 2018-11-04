@@ -26,9 +26,10 @@ app.get('/', function(req, res) {   // TODO: Enable mobile detect again
     // if (!md.mobile()) {
     //     res.sendFile(`${__dirname}/client/not-mobile.html`);
     // } else {
-        res.sendFile(`${__dirname}/client/dotsmash.html`);
+    res.sendFile(`${__dirname}/client/dotsmash.html`);
     // }
 });
+app.get('/dotsmash.js', function (req, res) { res.sendFile(`${__dirname}/client/dotsmash.js`); });
 
 // Socket code for each connected client
 // io.on('connection', function(socket){
@@ -48,5 +49,5 @@ http.listen(80, function(){
     console.log('listening on *:80');
 });
 
-const ConnectionHandler = require("./server/connection-handler.js").ConnectionHandler;
-var connectionHandler = new ConnectionHandler(http);
+const GameRoom = require("./server/game-room").GameRoom;
+var gameRoom = new GameRoom(http);
